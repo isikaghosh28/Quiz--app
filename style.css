@@ -1,0 +1,128 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Quiz Container */
+.quiz-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  animation: popIn 0.4s ease-in-out;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Question */
+h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Timer */
+#timer {
+  font-size: 15px;
+  color: #e63946;
+  text-align: right;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Options List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #e2e8f0;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  transform: scale(1.2);
+  accent-color: #5a67d8;
+}
+
+label {
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  user-select: none;
+}
+
+/* Submit Button */
+button {
+  background: linear-gradient(to right, #5a67d8, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin-top: 25px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #434190, #5b3d9e);
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .quiz-container {
+    padding: 25px 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
